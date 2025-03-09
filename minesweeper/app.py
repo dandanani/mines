@@ -10,10 +10,10 @@ app.secret_key = os.urandom(24)
 app.permanent_session_lifetime = timedelta(days=7)
 
 # MySQL Config
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'your_password'
-app.config['MYSQL_DB'] = 'MinesweeperApp'
+app.config['MYSQL_HOST'] = 'sql12.freesqldatabase.com'
+app.config['MYSQL_USER'] = 'sql12766751'
+app.config['MYSQL_PASSWORD'] = '34iIq3icX2'
+app.config['MYSQL_DB'] = 'sql12766751'
 mysql = MySQL(app)
 
 # Game state variables

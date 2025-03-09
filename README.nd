@@ -1,0 +1,10 @@
+# Minesweeper Betting Game
+
+This is a Flask-based Minesweeper game with a betting system. Players can place bets and reveal safe cells while avoiding mines.
+
+## 🔧 Installation
+
+1. **Clone the repository**
+   ```sh
+   git clone https://github.com/dandanani/mines.git
+   cd mines
