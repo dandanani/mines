@@ -1,0 +1,275 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* General Page Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    animation: backgroundAnimation 5s infinite alternate;
+    text-align: center;
+    color: white;
+}
+
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(135deg, #1e3c72, #2a5298); }
+    100% { background: linear-gradient(135deg, #2a5298, #1e3c72); }
+}
+
+/* LOGIN PAGE STYLING */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.login-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+}
+
+.login-subtitle {
+    color: #ddd;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.input-group:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background: #ff6b6b;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #ff4757;
+    transform: scale(1.05);
+}
+
+.register-link {
+    margin-top: 15px;
+    color: white;
+}
+
+.register-link a {
+    color: #ff9f43;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* HEADER */
+header {
+    background-color: #6200ea;
+    color: white;
+    padding: 10px 20px;
+}
+
+/* GAME CONTAINER */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* GAME TITLE */
+.game-title {
+    font-size: 2rem;
+    font-weight: bold;
+    background: purple;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.game-title:hover {
+    transform: scale(1.05);
+}
+
+/* BALANCE DISPLAY */
+#money {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* INPUT FIELDS */
+input[type="text"], input[type="number"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: 10px;
+    outline: none;
+    width: 80%;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    background: white;
+    color: black;
+    transform: scale(1.1);
+}
+
+/* START GAME BUTTON */
+#startGame {
+    background: #8a2be2;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#startGame:hover {
+    background: #5d12c4;
+    transform: scale(1.1);
+}
+
+/* GAME BOARD */
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+    gap: 5px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* GAME CELLS */
+.cell {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background 0.2s;
+}
+
+.cell:hover {
+    transform: scale(1.1);
+}
+
+/* SAFE CELL */
+.cell.safe {
+    background: #4CAF50;
+    animation: glow 0.5s ease-in-out;
+}
+
+/* MINE CELL */
+.cell.mine {
+    background: red;
+    animation: explode 0.5s ease-in-out;
+}
+
+/* ANIMATIONS */
+@keyframes glow {
+    0% { box-shadow: 0 0 5px #4CAF50; }
+    50% { box-shadow: 0 0 20px #4CAF50; }
+    100% { box-shadow: 0 0 5px #4CAF50; }
+}
+
+@keyframes explode {
+    0% { transform: scale(1); background: orange; }
+    50% { transform: scale(1.3); background: red; }
+    100% { transform: scale(1); background: red; }
+}
+
+/* LOGOUT BUTTON */
+.logout {
+    margin-top: 10px;
+    background: red;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.logout:hover {
+    background: darkred;
+    transform: scale(1.1);
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper Game</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Minesweeper Game</h1>
+        <p>Balance: <span id="money">{{ money }}</span></p>
+        <button id="logout">Logout</button>
+    </header>
+
+    <main>
+        <div class="controls">
+            <label for="betAmount">Bet Amount:</label>
+            <input type="number" id="betAmount" placeholder="Enter bet amount">
+
+            <label for="numMines">Number of Mines:</label>
+            <input type="number" id="numMines" placeholder="Enter number of mines">
+
+            <button id="startGame">Start Game</button>
+        </div>
+
+        <div id="gameBoard" class="game-board"></div>
+    </main>
+
+    <script src="/static/js/game.js"></script>
+</body>
+</html>
