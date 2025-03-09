@@ -1,0 +1,62 @@
+-- MySQL dump 10.13  Distrib 5.5.30, for Win32 (x86)
+--
+-- Host: localhost    Database: minesweeperapp
+-- ------------------------------------------------------
+-- Server version	5.5.30
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `mobile_number` varchar(15) NOT NULL,
+  `otp` int(11) NOT NULL,
+  `money` bigint(20) DEFAULT '100000',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`),
+  UNIQUE KEY `mobile_number` (`mobile_number`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'NANIDANDA','scrypt:32768:8:1$wOZFHpcZmehVb1ER$82c5086df1f65153deeeb5e666e6ec978379ad54024330b9257e81684a849221a9e831263c6fb8635b4b89fb447c6f597fde579ad4a49d81ec3c6a4128bb450f','7794970114',3369,100000,'2025-02-06 16:56:54'),(2,'aaaa','scrypt:32768:8:1$OEuywvAmCDdatNnI$2f99d65333294c49133d059fe76f1695be71d0e7188f2cc294ef86973bd51b54f98db375cfcc520001616d745245c80d14909aded10457b7ccb244e701c9b06e','9876543210',2143,99997637,'2025-02-06 17:06:37'),(3,'1111','scrypt:32768:8:1$vAPAMzqMeWzUXEm1$56692b3e3a2a2080ab122bef4c2e683fa36564017e327697bb9fa70890992e94f38944a3b3c9de1c3aeec5d5797985dac2d536a1132ddc0ad8e12080cef83c4b','1111111111',5225,82000,'2025-03-09 14:09:37');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping routines for database 'minesweeperapp'
+--
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2025-03-09 20:38:01
